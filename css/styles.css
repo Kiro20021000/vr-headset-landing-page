@@ -1,839 +1,755 @@
-body {
-    margin: 0;
-    font-family: 'Heebo', sans-serif;
-    padding-top: 80px;
-}
-
-.container {
-    width: 1440px;
-    max-width: 90%;
-    margin: auto;
-    padding: 0 16px;
-    
-}
-
-
-ul {
+* {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
+    font-family: "Open Sans", sans-serif;
 }
 
+
 header {
-    background-color: #FFF;
-    box-shadow: 0 1px 6px 0 rgba(0,0,0,0.15);
-    height: 80px;
-    position: fixed;
-    top: 0;
-    left: 0;
+    height: 70px;
     width: 100%;
-    z-index: 1;
+    box-shadow: 0px 1px 6px rgba(0,0,0,0.1);
 }
 
 header .container {
     display: flex;
-    align-items: center;
     justify-content: space-between;
+    flex-direction: row;
     height: 100%;
+    align-items: center;
+    width: 1440px;
+    max-width: 90%;
+    margin: auto;
+    background-color: #FFFFFF;
 }
 
-header .logo {
-    display: inline-block;
+
+header section.logo {
     font-size: 27px;
 }
-
-header .logo a {
-    text-decoration: none;
-    color: black;
-}
-
-header .logo .blue-dot {
-    background-color: #33c6dd;
+.blue-dot  {
+    display: inline-block;
     width: 10px;
     height: 10px;
-    display: inline-block;
+    border-radius: 10px;
+    background-color: #33C6DD;
     vertical-align: middle;
-    border-radius: 6px;
-}
+    }
 
-header nav {
-    display: inline-block;
-}
 
+
+ul {
+    list-style-type: none;
+}
 header nav ul li {
     display: inline-block;
+    margin-left: 26px;
 }
-
-header nav ul li.menu-icon {
-    display: none;
-}
-
-header nav ul li.menu-icon img {
-    vertical-align: middle;
-    width: 24px;
-    height: auto;
-}
-
 header nav ul li a {
+    text-decoration: none;
     color: #3E3E3E;
     font-size: 15px;
-    letter-spacing: 0.37px;
-    margin-right: 24px;
-    text-decoration: none;
+    font-weight: 400;
 }
-
 header nav ul li a:hover {
-    color: #33c6dd;
+    color: #33C6DD;
+    /* transition: 0.5s ease; */
 }
 
-header nav ul li:last-of-type a {
-    margin-right: 0;
+header nav ul li:first-of-type {
+    margin-left: 0;
+}
+header nav ul li.menu {
+    display: none;
+}
+.first-list {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
 }
 
-section.hero {
+
+/* Hero Section */
+section.hero  {
     position: relative;
+    width: 1920px;
+    max-width: 100%;
 }
-
-section.hero img {
+.hero-image img {
     width: 100%;
+    max-width: 100%;
     height: auto;
 }
 
 .hero-content {
     position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: 0;
+    left: 240px;
+    top: 196px;
+    bottom: 194px;
 }
 
-.hero-content .container {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    height: 100%;
-}
-
-.hero-content h1 {
+.hero-head {
     max-width: 495px;
-    color: #FFF;
+    height: 112px;
     font-size: 50px;
-    letter-spacing: 1.25px;
+    color: #FFFFFF;
     line-height: 56px;
-    margin-bottom: 16px;
-    margin-top: 0;
-    font-weight: normal;
+    margin-bottom: 20px;
 }
 
-.hero-content p {
-    max-width: 518px;
-    color: #FFF;
+.hero-par {
+    max-width: 495px;
+    height: 58px;
+    font-size: 20px;
     font-weight: 300;
-    font-size: 20px;
-    letter-spacing: 0.5px;
     line-height: 28px;
-    margin-bottom: 21px;
-    margin-top: 0;
+    color: #FFFFFF;
 }
 
-
-.hero-content button {
+.hero-but {
+    background-color: #33C6DD;
+    border-radius: 25px;
+    border: 1px solid #33C6DD;
+    width: 200px;
     height: 50px;
-    width: 220px;
-    max-width: 100%;
-    border-radius: 92px;
-    background-color: #33c6dd;
-    color: #FFF;
     font-size: 16px;
-    font-weight: 700;
-    letter-spacing: 0.4px;
-    line-height: 24px;
-    text-align: center;  
-    border: none;  
-    text-transform: uppercase;
+    color: #FFFFFF;
+    margin-top: 20px;
     cursor: pointer;
 }
-
-.hero-content button:hover {
-    color: #33c6dd;
-    background-color: #FFF;
-    border: 1px solid #33c6dd;
-}
-
-section.best-sellers {
-    padding-top: 80px;
-}
-
-section.best-sellers h2 {
-    text-align: center;
-    font-size: 34px;
-    letter-spacing: 0.85px;
-    line-height: 42px;
-    font-weight: normal;
-    margin: 0 0 14px 0;
-}
-
-section.best-sellers hr {
-    border: none;
-    border-top: 5px solid #33c6dd;
-    width: 66px;
-}
-
-section.best-sellers .product-slider {
-    margin-top: 76px;
-}
-
-section.best-sellers .container {
-    display: flex;
-    justify-content: space-around;
-    padding: 0 8px;
-}
-
-section.best-sellers .product-slider .product {
-    border-radius: 8px;
-    border: 1px solid #DDD;
-    width: 33%;
-    text-align: center;
-    margin: 0 8px;
-    padding: 40px;
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    cursor: pointer;
-}
-
-
-section.best-sellers .product-slider .product img {
-    max-width: 100%;
-}
-
-section.best-sellers .product-slider .product.new::before {
-    content: "New";
-    background-color: #614dc9;
-    position: absolute;
-    top: 12px;
-    right: 12px;
-    color: #FFF;
-    font-size: 14px;
-    font-weight: 700;
-    letter-spacing: 0.35px;
-    line-height: 21px;
-    text-align: center;
-    padding: 4px 15px;
-    border-radius: 40px;
-    background-color: #614dc9;
-}
-
-section.best-sellers .product-slider .product .product-info {
-    margin-top: 50px;
-}
-
-section.best-sellers .product-slider .product .product-info .categories {
-    color: #33c6dd;
-    font-weight: normal;
-    font-size: 14px;
-    letter-spacing: 0.35px;
-    line-height: 30px;
-    margin-bottom: 8px;
-    margin-top: 0;
-}
-
-section.best-sellers .product-slider .product .product-info .title {
-    font-size: 20px;
-    letter-spacing: 0.5px;
-    line-height: 26px;
-    margin-bottom: 6px;
-    font-weight: normal;
-    margin-top: 0;
-    
-}
-
-section.best-sellers .product-slider .product .product-info .price {
-    font-size: 28px;
-    font-weight: bold;
-    letter-spacing: 0.7px;
-    line-height: 30px;
-    margin-bottom: 16px;
-    margin-top: 0;
-}
-
-section.best-sellers .product-slider .product .product-info .price .discounted-price {
-    color: #EC1C1C;
-}
-
-section.best-sellers .product-slider .product .product-info .price .original-price {
-    color: #9B9B9B;
-    font-weight: normal;
-    font-size: 16px;
-    letter-spacing: 0.4px;
-    line-height: 30px;
-    text-decoration: line-through;
-}
-
-section.best-sellers .product-slider .product .product-info button {
-    height: 50px;
-    width: 219.5px;
-    border: 1px solid #000;
+.hero-but:hover {
+    color: #33C6DD;
     background-color: white;
-    border-radius: 220px;
-    text-transform: uppercase;
-    font-size: 16px;
-    font-weight: 700;
-    letter-spacing: 0.4px;
-    line-height: 24px;
-    cursor: pointer;
-}
-
-section.best-sellers .product-slider .product:hover .product-info button {
-    background-color: #33c6dd;
-    border: 1px solid #33c6dd;
-    color: white;
+    border: 1px solid #33C6DD;
+    transition: 0.3s ease;
 }
 
 
-section.newsletter {
-    background-color: rgba(200,200,200,0.18);
-    max-width: 955px;
+/* Best seller Section */
+
+.best-seller .container {
     text-align: center;
-    padding: 72px 0;
-    margin: 80px auto;
+    margin:0 auto;
 }
-
-section.newsletter h3 {
-    font-size: 24px;
-    letter-spacing: 0.6px;
+.seller-head {
+    font-size: 34px;
     line-height: 42px;
-    font-weight: normal;
-    margin-top: 0;
-    margin-bottom: 10px;
+    font-weight: 400;
+    text-align: center;
+    margin-bottom: 31px;
+    margin-top: 89px;
 }
 
-section.newsletter p {
-    font-size: 16px;
-    letter-spacing: 0.4px;
-    line-height: 42px;
-    margin-top: 0;
-    margin-bottom: 20px;
+.seller-content hr {
+    height: 6px;
+    width: 66px;
+    background-color: #33C6DD;
+    border: none;
+    margin: auto;
+    margin-bottom: 76px;
 }
 
-section.newsletter form {
+.cards {
     display: flex;
-    justify-content: center;
-}
-
-section.newsletter form input {
-    height: 50px;
-    width: 326px;
-    max-width: 80%;
-    border-radius: 60px 0 0 60px;
-    box-sizing: border-box;
-    border: 1px solid #3E3E3E;
-    border-right: none;
-    color: #3E3E3E;
-    font-family: Heebo;
-    font-size: 14px;
-    letter-spacing: 0.35px;
-    line-height: 21px;
-    padding-left: 22px;
-}
-
-section.newsletter form button {
-    height: 50px;
-    width: 145px;
-    max-width: 20%;
-    box-sizing: border-box;
-    border-radius: 0 60px 60px 0;
-    background-color: #614dc9;
-    border: 1px solid #614dc9;
-    color: #FFF;
-    font-size: 14px;
-    letter-spacing: 0.35px;
-    line-height: 21px;
-    text-transform: uppercase;
-    cursor: pointer;
-
-}
-
-section.newsletter form button:hover {
-    color: #614dc9;
-    border: 1px solid #614dc9;
-    background-color: #FFF;
-    border: 1px solid #3E3E3E;
-}
-
-
-footer .bottom-nav {
-    padding: 60px 0;
-    background-color: #3E3E3E;
-}
-
-footer .bottom-nav .container {
-    max-width: 955px;
-    display: flex;
-    justify-content: space-between;
-}
-
-footer .bottom-nav ul {
-    list-style: none;
-}
-
-footer .bottom-nav ul li a {
-    color: #E0E0E0;
-    font-size: 16px;
-    letter-spacing: 0.4px;
-    line-height: 22px;
-    margin-top: 0;
-    margin-bottom: 10px;
-    text-decoration: none;
-    display: block;
-}
-
-footer .bottom-nav ul li a:hover {
-    color: #33c6dd;
-}
-
-footer .bottom-nav ul li.list-title {
-    font-size: 20px;
-    font-weight: 700;
-    letter-spacing: 0.5px;
-    line-height: 26px;
-    margin-top: 0;
-    margin-bottom: 20px;
-    color: #FFF;
-}
-
-footer .copyright-text {
-    color: white;
-    background-color: #2B2B2B;
-    height: 60px;
-    display: flex;
+    flex-direction: row;
     align-items: center;
     justify-content: center;
-    font-size: 16px;
-    letter-spacing: 0.4px;
-    line-height: 22px;
+    gap: 15px;
+    margin: 0 auto;
+    text-align: center;
 }
 
+span.new {
+    position: absolute;
+    right: 12px;
+    top: 12px;
+    padding: 5px 27px;
+    font-weight: 700;
+    font-size: 14px;
+    color: #FFFFFF;
+    background-color: #614DC9;
+    border: 1px solid #614DC9;
+    border-radius: 16px;
+}
 
-/* **********************************
-******  CSS MEDIA QUERIES ********* 
-************************************/
+.card1 {
+    position: relative;
+    height: 561px;
+    text-align: center;
+    border-radius: 8px;
+    width: 470px;
+    border: 1px solid #DDDDDD;
+    cursor: pointer;
+    .smart-image {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 270px;
+        height: 244px;
+        margin: 0 auto;
+        margin-top: 57px;
+        margin-bottom: 53px;
+        padding-right: 109px;
+        padding-left: 109px;
+    }
+}
 
-/* Start of Design for Small Desktops */
+.card2 {
+    position: relative;
+    height: 561px;
+    border-radius: 8px;
+    text-align: center;
+    width: 470px;
+    border: 1px solid #DDDDDD;
+    cursor: pointer;
+    .head-image {
+        width: 198px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 193px;
+        margin: 0 auto;
+        margin-top: 57px;
+        margin-bottom: 99px;
+        padding-right: 157px;
+        padding-left: 115px;
+    }
+}
+
+.card3 {
+    height: 561px;
+    width: 470px;
+    border-radius: 8px;
+    text-align: center;
+    border: 1px solid #DDDDDD;
+    cursor: pointer;
+    .camera-image {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        max-width: 277px;
+        height: 198px;
+        margin: 0 auto;
+        margin-top: 41px;
+        margin-bottom: 92px;
+        padding-right: 124px;
+        padding-left: 70px;
+    }
+    .price {
+        display: flex;
+        align-items: baseline;
+        justify-content: center;
+        gap: 5px;
+        .discount {
+            font-size: 16px;
+            line-height: 24px;
+            color: #9B9B9B;
+            text-decoration: line-through;
+        }
+        h3 {
+            color: #EC1C1C;
+        }
+    }
+}
+.cards h5 {
+    margin-bottom: 9px;
+    font-size: 14px;
+    color: #33C6DD;
+    font-weight: 400;
+}
+.cards h4 {
+    font-size: 20px;
+    line-height: 26px;
+    font-weight: 400;
+    margin-bottom: 10px;
+}
+.cards h3 {
+    font-size: 28px;
+    line-height: 30px;
+    opacity: 0.7;
+    font-weight: 400;
+    text-align: center;
+    margin-bottom: 19px;
+}
+.cards .add-but {
+    border: 1px solid black;
+    border-radius: 25px;
+    font-size: 16px;
+    padding: 10px 65px;
+    background-color: #FFFFFF;
+    margin-bottom: 43px;
+}
+.cards .add-but:hover {
+    cursor: pointer;
+    color: white;
+    background-color: #33C6DD;
+    border: 1px solid #33C6DD;
+}
+
+/* Newsletter Section */
+
+section.newsletter {
+    width: 955px;
+    height: 292px;
+    margin: 80px auto;
+    background-color: #f5f5f5;
+    text-align: center;
+    .news-content {
+        .news-head {
+            padding-top: 72px;
+            font-size: 24px;
+            line-height: 42px;
+            font-weight: 400;
+        }
+        .news-par {
+            margin-top: 10px;
+            font-size: 16px;
+            line-height: 24px;
+        }
+    }
+    .formm {
+        padding-top: 21px;
+        input {
+            padding: 14px 224px 14px 24px;
+            border-radius: 25px 0px 0px 25px  ;
+            color: #3E3E3E;
+            font-size: 14px;
+            line-height: 21px;
+            border: 1px solid black;
+            border-right: none;
+        }
+        button {
+            padding: 14px 36px;
+            border-radius: 0px 25px 25px 0px;
+            background-color: #614DC9;
+            border: 1px solid #614DC9;
+            font-size: 14px;
+            line-height: 21px;
+            color: #FFFFFF;
+        }
+        button:hover {
+            color: #614DC9;
+            background-color: white;
+            border: 1px solid black;
+            cursor: pointer;
+        }
+    }
+}
+
+/* Footer style */
+
+footer  {
+    background-color: #3E3E3E;
+    color: white;
+    padding: 60px 0;
+}
+
+footer .container .contentt {
+    width: 950px;
+    max-width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+}
+
+footer .container .contentt ul {
+    list-style-type: none;
+    width: 25%;
+}
+footer .container .contentt ul li.list-title {
+    font-size: 20px;
+    line-height: 26px;
+    margin-bottom: 20px;
+}
+footer .container .contentt ul li {
+    margin-bottom: 9px;
+    font-size: 16px;
+    line-height: 24px;
+}
+footer .container .contentt ul li:last-of-type {
+    margin-bottom: 0;
+}
+footer .container .contentt ul a {
+    text-decoration: none;
+    color: #FFFFFF;
+}
+footer .container .contentt ul a:hover {
+    cursor: pointer;
+    color: #33C6DD;
+    transition: 0.3s ease;
+}
+
+section.copy {
+    margin: 0 auto;
+    text-align: center;
+    background-color: #2B2B2B;
+    color: #E0E0E0;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 22px;
+    padding: 19px 0;    
+}
+
+/* ########################### */
+/* Styles for smaller Desktop */
+/* ########################### */
+
 @media screen and (max-width: 1440px) {
-
     .container {
-        width: 1180px;
-    }
-
-    body {
-        padding-top: 70px;
-    }
-
-    header {
-        height: 70px;
-    }
-
-    .hero-content h1 {
-        font-size: 44px;
-        letter-spacing: 1.1px;
-        line-height: 50px;
-        margin-bottom: 12px;
-    }
-    
-    .hero-content p {
-        font-size: 18px;
-        letter-spacing: 0.45px;
-        line-height: 26px;
-        margin-bottom: 12px;
-    }
-    
-    .hero-content button {
-        font-size: 14px;
-        letter-spacing: 0.35px;
-        line-height: 21px;
-        
-    }
-
-    section.best-sellers {
-        padding-top: 70px;
-    }
-    
-    section.best-sellers h2 {
-        line-height: 38px;
-        margin: 0 0 16px 0;
-    }
-
-    section.best-sellers .product-slider {
-        margin-top: 70px;
-    }
-    
-    
-    section.best-sellers .product-slider .product .product-info .categories {
-        font-size: 12px;
-        letter-spacing: 0.3px;
-        line-height: 30px;
-
-    }
-    
-    section.best-sellers .product-slider .product .product-info .title {
-        font-size: 16px;
-        letter-spacing: 0.5px;
-        line-height: 26px;
-        
-    }
-    
-    section.best-sellers .product-slider .product .product-info .price {
-        font-size: 24px;
-        font-weight: 700;
-        letter-spacing: 0.6px;
-        margin-bottom: 12px;
-    }
-    
-    section.best-sellers .product-slider .product .product-info .price .original-price {
-        font-size: 14px;
-        letter-spacing: 0.35px;
-        line-height: 30px;
-        display: block;
-        line-height: 16px;
-    }
-    
-    section.best-sellers .product-slider .product .product-info button {
-        height: 40px;
-        width: 180px;
-        letter-spacing: 0.35px;
-        line-height: 21px;
-    }
-
-    section.newsletter {
-        width: 881px;
-        max-width: 100%;
-        padding: 50px 0;
-        margin: 70px auto;
-    }
-    
-    section.newsletter h3 {
-        font-size: 22px;
-        letter-spacing: 0.55px;
-        line-height: 42px;
-    }
-    
-    section.newsletter p {
-        font-size: 14px;
-        letter-spacing: 0.35px;
-        line-height: 42px;
-        margin-bottom: 15px;
-    }
-    
-    section.newsletter form input {
-        font-size: 12px;
-        letter-spacing: 0.3px;
-        line-height: 18px;
-    }
-    
-    section.newsletter form button {
-        font-size: 12px;
-        letter-spacing: 0.3px;
-        line-height: 18px;
-    }
-
-    footer .bottom-nav {
-        padding: 50px 0;
-    }
-    
-    footer .bottom-nav .container {
+        width: 1440px;
         max-width: 90%;
     }
-    
-    footer .bottom-nav ul li a {
-        font-size: 14px;
-        letter-spacing: 0.35px;
-        line-height: 22px;
+    section.hero  {
+    width: 100%;
+    max-width: 100%;
+}
+    .hero-image {
+        width: 1440px;
     }
-    
-    footer .bottom-nav ul li.list-title {
+    .hero-image img {
+    max-width: 100%;
+    height: 616px;
+}
+    .hero-head {
+    font-size: 40px;
+    line-height: 46px;
+    margin-bottom: 12px;
+}
+
+.hero-par {
+    font-size: 16px;
+    line-height: 24px;
+}
+.hero-but {
+    width: 196px;
+    margin-top: 12px;
+}
+
+.cards h5 {
+    margin-bottom: 7px;
+    font-size: 12px;
+}
+.cards h4 {
+    font-size: 16px;
+    margin-bottom: 5px;
+}
+.cards h3 {
+    font-size: 24px;
+    margin-bottom: 6px;
+}
+.cards .add-but {
+    font-size: 14px;
+    padding: 10px 50px;
+    margin-bottom: 33px;
+}
+ .price {
+        .discount {
+            font-size: 14px;
+            line-height: 21px;
+        }
+    }
+
+section.newsletter {
+    width: 881px;
+    height: 243px;
+    margin: 70px auto;
+}
+.news-content {
+        .news-head {
+            padding-top: 50px;
+            font-size: 22px;
+        }
+        .news-par {
+            font-size: 14px;
+            line-height: 21px;
+        }
+    }
+    .formm {
+        padding-top: 15px;
+        input {
+            padding: 14px 235px 14px 24px;
+            border-radius: 30px 0px 0px 30px  ;
+            font-size: 12px;
+            line-height: 18px;
+        }
+        button {
+            padding: 14px 41px;
+            font-size: 12px;
+            line-height: 18px;
+        }
+    } 
+
+        footer  {
+    padding: 50px 0;
+    }
+
+    footer .container .contentt {
+        width: 1180px;
+        max-width: 90%;
+    }
+    footer .container .contentt ul li.list-title {
         font-size: 16px;
-        letter-spacing: 0.5px;
-        line-height: 26px;
         margin-bottom: 12px;
     }
-    
-    footer .copyright-text {
-        height: 50px;
+    footer .container .contentt ul li {
+        margin-bottom: 10px;
         font-size: 14px;
-        letter-spacing: 0.35px;
-        line-height: 22px;
-        text-align: center;
+        line-height: 21px;
     }
 
+    section.copy {
+    font-size: 14px;
+    padding: 14px 0;    
 }
-/* End of Design for Small Desktops */
 
-/* Start of Design for Tablets */
+
+}
+
+/* ########################### */
+/* Styles for Tablets */
+/* ########################### */
+
 @media screen and (max-width: 960px) {
-
     .container {
+        width: 92;
         max-width: 92%;
     }
-
-    header .logo {
-        font-size: 24px;
-    }
-
     header nav ul li {
-        display: none;
-    }
-    
-    header nav ul li.menu-icon {
-        display: inline-block;
-    }
-
-    .hero-content h1 {
-        font-size: 40px;
-        letter-spacing: 1px;
-        line-height: 46px;
-    }
-    
-    .hero-content p {
-        font-size: 16px;
-        letter-spacing: 0.4px;
-        line-height: 24px;
-    }
-    
-    .hero-content button {
-        font-size: 14px;
-        letter-spacing: 0.35px;
-        line-height: 21px;
-        width: 196px;
-        
-    }
-
-    section.best-sellers {
-        padding-top: 50px;
-    }
-    
-    section.best-sellers h2 {
-        font-size: 28px;
-        letter-spacing: 0.7px;
-        line-height: 38px;
-        margin: 0 0 12px 0;
-    }
-
-    section.best-sellers .product-slider {
-        margin-top: 48px;
-    }
-
-    section.best-sellers .container {
-        flex-wrap: wrap;
-        justify-content: center;
-    }
-
-    section.best-sellers .product-slider .product {
-        min-width: 220px; 
-        margin: 17px 8px;
-    }
-
-    section.best-sellers .product-slider .product .product-info .categories {
-        font-size: 12px;
-        letter-spacing: 0.3px;
-        line-height: 30px;
-        margin-bottom: 5px;
-    }
-    
-    section.best-sellers .product-slider .product .product-info .title {
-        font-size: 13px;
-        letter-spacing: 0.5px;
-        line-height: 18px;
-        margin-bottom: 8px;
-    }
-    
-    section.best-sellers .product-slider .product .product-info .price {
-        font-size: 16px;
-        letter-spacing: 0.4px;
-        line-height: 30px;
-    }
-    
-    section.best-sellers .product-slider .product .product-info .price .original-price {
-        font-size: 9px;
-        letter-spacing: 0.23px;
-        line-height: 30px;
-        display: block;
-        line-height: 14px;
-    }
-    
-    section.best-sellers .product-slider .product .product-info button {
-        height: 36px;
-        width: 193px;
-        font-size: 12px;
-        letter-spacing: 0.3px;
-        line-height: 18px;
-    }
-
-    section.best-sellers .product-slider .product.new::before {
-        font-size: 11px;
-        font-weight: 700;
-        letter-spacing: 0.27px;
-        padding: 0px 12px;
-    }
-
-    section.newsletter {
-        width: 100%;
-        max-width: 100%;
-        padding: 50px 0;
-        margin: 50px auto;
-    }
-    
-    section.newsletter h3 {
-        font-size: 22px;
-        letter-spacing: 0.55px;
-        line-height: 42px;
-    }
-    
-    section.newsletter p {
-        font-size: 14px;
-        letter-spacing: 0.35px;
-        line-height: 42px;
-    }
-
-    footer .bottom-nav {
-        padding: 50px 0;
-    }
-    
-    footer .bottom-nav .container {
-        max-width: 90%;
-    }
-    
-
+    display: none
 }
-/* End of Design for Tablets */
+    header nav ul li.menu {
+    display: inline-block;
+}
+    section.hero  {
+    width: 92%;
+    max-width: 92%;
+}
+    .hero-image {
+        width: 960px;
+    }
+    .hero-image img {
+    max-width: 100%;
+    height: 620px;
+}
+    .hero-head {
+    font-size: 40px;
+    line-height: 46px;
+    margin-bottom: 12px;
+}
 
-/* Start of Design for Mobile Phones */
+.hero-par {
+    font-size: 16px;
+    line-height: 24px;
+}
+.hero-but {
+    width: 196px;
+    margin-top: 12px;
+}
+.best-seller {
+    width: 960px;
+    margin: 0 auto;
+    text-align: center;
+}
+.seller-head {
+    font-size: 28px;
+    margin-bottom: 12px;
+    line-height: 38px;
+}
+.seller-content hr {
+    margin-bottom: 48px;
+}
+span.new {
+    top: 6px;
+    right: 6px;
+    font-size: 11px;
+    padding: 5px 14px;
+}
+.cards h5 {
+    margin-bottom: 5px;
+    font-size: 11px;
+}
+.cards h4 {
+    font-size: 13px;
+    margin-bottom: 7px;
+}
+.cards h3 {
+    font-size: 16px;
+    margin-bottom: 6px;
+}
+.cards .add-but {
+    font-size: 12px;
+    padding: 9px 39px;
+    margin-bottom: 33px;
+}
+ .price {
+        .discount {
+            font-size: 9px;
+            line-height: 30px;
+        }
+    }
+
+section.newsletter {
+    width: 100%;
+    height: 243px;
+    margin: 48px auto;
+}
+.news-content {
+        .news-par {
+            margin-bottom: 15px;
+            margin-top: 10px;
+        }
+    }
+    footer .container {
+        width: 92%;
+        max-width: 92%;
+    }
+}
+
+/* ########################### */
+/* Styles for Mobile */
+/* ########################### */
+
 @media screen and (max-width: 576px) {
-
-    header .logo {
+    header section.logo {
         font-size: 18px;
     }
-
-    header .logo .blue-dot {
-        width: 7px;
-        height: 7px;
+    .hero-image img {
+        width: 576px;
+        max-width: 100%;
     }
 
-    .hero-content {
-        position: static;
-    }
+   .hero-content {
+    position: initial;
+    text-align: center;
+}
 
-    .hero-content h1 {
-        color: #000;
-        font-size: 32px;
-        letter-spacing: 0.8px;
-        line-height: 38px;
-        text-align: center;
-        margin-bottom: 32px;
-        margin-top: 27px;
-    }
-    
-    .hero-content p {
-        display: none;
-    }
-    
-    .hero-content button {
-        font-size: 14px;
-        letter-spacing: 0.35px;
-        line-height: 21px;
-        width: 196px;
-        margin: auto;
-        
-    }
+      .hero-head {
+    font-size: 32px;
+    line-height: 38px;
+    margin-bottom: 32px;
+    margin-top: 26px;
+    color: black;
+}
 
-    section.best-sellers {
-        padding-top: 64px;
-    }
-    
-    section.best-sellers .product-slider .product {
-        width: 82%;
-        max-width: 360px;
-    }
+.hero-par {
+    display: none;
+}
+.hero-but {
+    width: 196px;
+    font-size: 14px;
+    margin-bottom: 64px;
+}
+.best-seller {
+    width: 92%;
+    max-width: 92%;
+}
+.cards {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 24px;
+    margin: 0 auto;
+    text-align: center;
+}
 
-    section.best-sellers h2 {
-        font-size: 36px;
-        letter-spacing: 0.6px;
-        line-height: 38px;
-        margin: 0 0 16px 0;
+.seller-head {
+    font-size: 24px;
+    margin-bottom: 14px;
+}
+.seller-content hr {
+    margin-bottom: 42px;
+}
+span.new {
+    top: 9px;
+    right: 8px;
+    padding: 5px 14px;
+}
+.cards h5 {
+    margin-bottom: 7px;
+    font-size: 12px;
+}
+.cards h4 {
+    font-size: 20px;
+    margin-bottom: 6px;
+}
+.cards h3 {
+    font-size: 16px;
+    margin-bottom: 6px;
+}
+.cards .add-but {
+    padding: 9px 62.5px;
+    margin-bottom: 40px;
+}
+ .price {
+        .discount {
+            font-size: 11px;
+        }
     }
+  section.newsletter {
+    width: 100%;
+    height: 243px;
+    margin: 64px auto;
+    .news-content {
+        .news-head {
+            padding-top: 44px;
+            font-size: 22px;
+        }
+        .news-par {
+            margin-top: 10px;
+            font-size: 14px;
+            line-height: 21px;
+        }
+}  
+.formm {
+        padding-top: 16px;
+        input {
+            padding: 16px 118px 16px 24px;
+            font-size: 12px;
+            line-height: 18px;
+        }
+        button {
+            padding: 16px 19px;
+            font-size: 12px;
+            line-height: 18px;
+            
+        }
+}
+  }
+  footer .container  {
+    padding: 48px 0;
+    margin: 0 auto;
+}
 
-    section.best-sellers hr {
-        border-top: 4px solid #33c6dd;
-        width: 40px;
-    }
+footer .container .contentt {
+    width: 950px;
+    max-width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    text-align: center;
+    align-items: center;
+    margin: 0 auto;
+    gap: 32px;
+}
+footer .container .contentt ul {
+    width: 100%;
+}
 
-    section.best-sellers .product-slider {
-        margin-top: 42px;
-    }
-    
-    section.best-sellers .product-slider .product .product-info .categories {
-        margin-bottom: 7px;
-    }
-    
-    section.best-sellers .product-slider .product .product-info .title {
-        font-size: 14px;
-        letter-spacing: 0.54px;
-        line-height: 18px;
-    }
-    
-    section.best-sellers .product-slider .product .product-info .price {
-        font-size: 20px;
-        font-weight: 700;
-        letter-spacing: 0.5px;
-    }
-    
-    section.best-sellers .product-slider .product .product-info .price .original-price {
-        font-size: 11px;
-        letter-spacing: 0.28px;
-        line-height: 20px;
-    }
-    
-    section.best-sellers .product-slider .product .product-info button {
-        height: 36px;
-        width: 146px;
-        font-size: 12px;
-        letter-spacing: 0.3px;
-        line-height: 18px;
-    }
+footer .container .contentt ul li.list-title {
+    font-size: 16px;
+    margin-bottom: 12px;
+}
 
-    section.newsletter {
-        padding: 44px 0;
-        margin: 60px auto;
-    }
+footer .container .contentt ul li {
+    margin-bottom: 10px;
+    font-size: 14px;
+    line-height: 18px;
+}
 
-    section.newsletter form input {
-        max-width: 65%;
-    }
-    
-    section.newsletter form button {
-        max-width: 35%;
-    }
-
-    footer .bottom-nav .container {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    footer .bottom-nav ul {
-        text-align: center;
-        margin-bottom: 32px;
-    }
-
-    footer .bottom-nav ul:last-of-type {
-        margin-bottom: 0;
-    }
-
-   
-
+section.copy {
+    font-size: 14px;
+    padding: 14px 0;    
+}
 
 }
-/* End of Design for Mobile Phones */
-
-
-
